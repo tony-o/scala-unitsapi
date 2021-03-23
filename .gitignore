@@ -1,2 +1,6 @@
 target/
+*.swp
+project/build/
+project/project/
+project/target/
 .bsp/
