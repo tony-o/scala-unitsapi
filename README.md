@@ -6,6 +6,8 @@ This api uses an homegrown LR parser to generate _an_ answer. The base package `
 
 ## Usage
 
+_*note:* this assumes you have `make`.  if you're not using make then you can just use the commands after the `make`. eg `make # sbt assembly` becomes `sbt assembly`_
+
 build & test (all of the subsequent commands do this same action)
 
 ```
