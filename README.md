@@ -39,9 +39,15 @@ run docker after build:
 # logging info
 ```
 ```
-λ ~$ curl -s ':8080/units/si?("/º)' | jq
+λ ~$ curl -s ':8080/units/si?units=("/º)' | jq
+# 200 OK
 {
   "multiplication_factor": 0.0002777777777777778,
   "unit_name": "(rad/rad)"
+}
+λ ~$ curl -s ':8080/units/si?units=y*t' | jq
+# 422 Unprocessable Entity
+{
+  "error": "Token 'y' is unknown"
 }
 ```
