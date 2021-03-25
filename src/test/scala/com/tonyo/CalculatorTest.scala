@@ -47,6 +47,9 @@ class CalculatorTest extends AnyFunSuite {
                                                ("(t t)", "Two non-number tokens in a row"),
                                                ("(t * ( ( ( ( ( ( t t ) ) ) ) ) ) )", "Two non-number tokens in a row"),
                                                ("(t * t", "Unbalanced parens"),
+                                               ("((t * t)", "Unbalanced parens"),
+                                               ("t * t)", "Unbalanced parens"),
+                                               ("(t * t))", "Unbalanced parens"),
                                               )
   for (t <- testsBad) {
     test(t._1) {

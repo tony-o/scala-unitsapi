@@ -31,6 +31,9 @@ object Calculator {
       }
       tokens.dropRightInPlace(1)
     }
+    if ((eatLast && tokens.length == 0) || (!eatLast && tokens.length > 0 && tokens.last.act != Op.NIL)) {
+      return Some("Unbalanced parens");
+    }
     if (eatLast) tokens.dropRightInPlace(1)
     tokens += new Tok(acc, Op.NUM, pos)
     None
